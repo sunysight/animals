@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Geomanist Bold';
-  src: url('fonts/geomanist-bold.woff2') format('woff2'),
-    url('fonts/geomanist-bold.woff') format('woff');
+  font-family: "Geomanist Bold";
+  src: url("fonts/geomanist-bold.woff2") format("woff2"),
+    url("fonts/geomanist-bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 :root {
-  font-family: 'Geomanist Bold', sans-serif;
+  font-family: "Geomanist Bold", sans-serif;
 }
 
 /* Box sizing rules */
@@ -27,7 +27,7 @@ figcaption {
 
 h1,
 h2 {
-  font-family: 'Geomanist Bold';
+  font-family: "Geomanist Bold";
   font-weight: 900;
   text-transform: uppercase;
   font-size: 10rem;
@@ -52,6 +52,12 @@ img {
   width: 100%;
   height: auto;
   display: block;
+  filter: grayscale(100%);
+  transition: all 2s ease-in-out;
+}
+
+img:hover {
+  filter: grayscale(0%);
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
@@ -65,10 +71,12 @@ img {
 }
 
 .box {
-  position: relative;
+  /*position: relative;*/
   min-height: 400px;
   max-width: 100%;
   margin: auto;
+  position: relative;
+  top: 160px;
 }
 
 .pink {
@@ -114,4 +122,38 @@ figure {
 .heading {
   background: #fff;
   padding-left: 2rem;
+}
+
+figcaption {
+  position: absolute;
+  left: 150px;
+  bottom: 0;
+}
+
+figure {
+  position: absolute;
+  bottom: 0;
+  left: 300px;
+  z-index: 2;
+}
+
+h2 {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  left: 36px;
+}
+
+.blue {
+  background-color: aqua;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+h1 {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  top: 0px;
 }
